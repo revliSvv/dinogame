@@ -81,7 +81,7 @@ function draw() {
     //move the ground
     ground.velocityX = -6;
     //scoring
-    score = score + Math.round(frameCount / 6000);
+    score = score + Math.round(frameCount / 600);
 
     restart.visible = false;
     gameOver.visible = false;
@@ -105,8 +105,8 @@ function draw() {
     //spawn obstacles on the ground
     spawnObstacles();
 
-    if (frameCount % 360 == 0) {
-      ground.velocityX *= 1.1;
+    if (frameCount % 30 == 0) {
+      ground.velocityX += 0.3;
     }
     
     if (obstaclesGroup.isTouching(trex)) {
